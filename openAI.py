@@ -1,7 +1,7 @@
 import openai
 from random import random
 
-openai.api_key = "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"
+openai.api_key = ""
 
 
 def get_openAI(prompt: str):
