@@ -1,7 +1,7 @@
 import openai
 from random import random
 
-openai.api_key = ""
+openai.api_key = "*OpenAI_KEY*"
 
 
 def get_openAI(prompt: str):
