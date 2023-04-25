@@ -31,7 +31,7 @@ if __name__ == "__main__":
 ```
 | параметр      | openAI              |
 | ------------- | ------------------- |
-| model_engine  | "text-davinci-003"  |
+| model_engine  | text-davinci-003  |
 | max_tokens    | 3000                |
 | temperature   | random()            |
 | stop          | None                |
