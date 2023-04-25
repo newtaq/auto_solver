@@ -20,7 +20,34 @@
   3) Спустя %время% появится окно вывода программы (или окно ошибки).
   4) Вы можете редактировать окно программы, а затем нажав на сердечко рядом, сохранить решение (Теперь каждый раз при вводе этого условия, решение будет приходить быстрее).
   
+## Алгоритм
+```mermaid
+graph TD;
+auto_solver.py --> interface;
+auto_solver.py --> functionality;
 
+interface --> auto_solver.py;
+functionality --> auto_solver.py
+
+AI_analyze.py --> functionality;
+
+tkinter --> interface;
+customtkinter --> interface;
+
+main_img --> interface;
+paste_button --> interface;
+
+
+PIL.image --> main_img;
+pyperclip --> paste_button;
+
+
+openAI.get_openAI --> AI_analyze.py;
+json --> AI_analyze.py;
+
+openai --> openAI.get_openAI;
+random.random --> openAI.get_openAI;
+```
 
 ## Использование openAI.get_openAI:
 ```
