@@ -25,8 +25,13 @@ main_frame = CTkFrame(root, fg_color='gray22')
 main_frame.place(relx=0.01, rely=0.01, relwidth=0.98, relheight=0.98)
 # endregion
 
+main_img = CTkImage(Image.open("background.png"), size=(1000, 600))
+main_img_label = CTkLabel(main_frame, image=main_img, width=500, height=500, text="")
+main_img_label.pack()
+
 # region program_name
-program_name_label = CTkLabel(master=main_frame, text="Решатель задач по физике v2.01", width=150, height=50, corner_radius=20, font=("Courier", 30), text_color="white")
+program_name_label = CTkLabel(master=main_frame, text="Решатель задач по физике v2.01", width=150, height=50, corner_radius=20, font=("Courier", 30), text_color="white",
+                              bg_color="transparent")
 program_name_label.place(relx=0, rely=0.01)
 # endregion
 
@@ -95,3 +100,4 @@ save_button.place_forget()
 # endregion
 
 root.mainloop()
+
