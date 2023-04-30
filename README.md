@@ -23,34 +23,22 @@
 ## Алгоритм
 ```mermaid
 graph TD;
-auto_solver.py --> interface;
-auto_solver.py --> functionality;
+openai --> openAI.py 
+random --> openAI.py
 
-interface --> auto_solver.py;
-functionality --> auto_solver.py
+json --> AI_analyze.py
+openAI.py --> AI_analyze.py
 
-AI_analyze.py --> functionality;
+tkinter --> auto_solver.py 
+customtkinter --> auto_solver.py 
+pyperclip --> auto_solver.py
+PIL.image --> auto_solver.py
+AI_analyze.py --> auto_solver.py 
 
-tkinter --> interface;
-customtkinter --> interface;
-
-main_img --> interface;
-paste_button --> interface;
-
-
-PIL.image --> main_img;
-pyperclip --> paste_button;
-
-
-openAI.get_openAI --> AI_analyze.py;
-json --> AI_analyze.py;
-
-openai --> openAI.get_openAI;
-random.random --> openAI.get_openAI;
 ```
 
 ## Использование openAI.get_openAI:
-```
+```python
 from openAI import get_openAI
 
 if __name__ == "__main__":
